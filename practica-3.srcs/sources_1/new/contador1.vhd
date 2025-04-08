@@ -35,12 +35,12 @@ architecture Behavioral of contador1 is
 begin
     process(clk, reset)
     begin
-        if reset = '1' or enable = '0' then
+        if reset = '1' then
             temp_count <= (others => '0');
         elsif rising_edge(clk) then
-            if enable = '1' then
-                temp_count <= temp_count + 1;
-            end if;
+           
+            temp_count <= temp_count + 1;
+            
         end if;
     end process;
     count <= temp_count;

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Tue Apr  8 10:07:12 2025
-| Host             : AB031IND071 running 64-bit major release  (build 9200)
+| Date             : Tue Apr  8 13:22:40 2025
+| Host             : AB031IND013 running 64-bit major release  (build 9200)
 | Command          : report_power -file redundancia_power_routed.rpt -pb redundancia_power_summary_routed.pb -rpx redundancia_power_routed.rpx
 | Design           : redundancia
 | Device           : xc7a100tcsg324-1
@@ -30,15 +30,15 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.115        |
+| Total On-Chip Power (W)  | 0.120        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.018        |
+| Dynamic (W)              | 0.022        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
 | Junction Temperature (C) | 25.5         |
-| Confidence Level         | Low          |
+| Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
 | Design Nets Matched      | NA           |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      161 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       50 |     63400 |            0.08 |
+| Slice Logic    |    <0.001 |      132 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       38 |     63400 |            0.06 |
 |   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
-|   Register     |    <0.001 |       63 |    126800 |            0.05 |
-|   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |    <0.001 |      135 |       --- |             --- |
-| I/O            |     0.016 |       28 |       210 |           13.33 |
+|   Register     |    <0.001 |       55 |    126800 |            0.04 |
+|   Others       |     0.000 |        6 |       --- |             --- |
+| Signals        |    <0.001 |      115 |       --- |             --- |
+| I/O            |     0.021 |       28 |       210 |           13.33 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.115 |          |           |                 |
+| Total          |     0.120 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.017 |       0.001 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.010 |       0.006 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -94,12 +94,12 @@ Table of Contents
 | User Input Data             | Confidence | Details                                               | Action                                                                                                             |
 +-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                      |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                          |                                                                                                                    |
 |                             |            |                                                       |                                                                                                                    |
-| Overall confidence level    | Low        |                                                       |                                                                                                                    |
+| Overall confidence level    | Medium     |                                                       |                                                                                                                    |
 +-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -140,7 +140,7 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| redundancia |     0.018 |
+| redundancia |     0.022 |
 +-------------+-----------+
 
 

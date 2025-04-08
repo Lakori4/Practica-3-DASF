@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Apr  8 10:07:07 2025
-| Host         : AB031IND071 running 64-bit major release  (build 9200)
+| Date         : Tue Apr  8 13:22:35 2025
+| Host         : AB031IND013 running 64-bit major release  (build 9200)
 | Command      : report_drc -file redundancia_drc_routed.rpt -pb redundancia_drc_routed.pb -rpx redundancia_drc_routed.rpx
 | Design       : redundancia
 | Device       : xc7a100tcsg324-1
